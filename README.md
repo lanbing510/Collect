@@ -16,7 +16,7 @@ Collect，便利你的摘录，享受你的阅读。
 Visual Stuio 2013
 
 ###功能：
-Collect模式下，在你进行阅读的时候，无论你使用的是什么阅读器（网页浏览器、PDF阅读器，Office.....），只需复制你想要摘录的文字，即可自动摘录到你的文档里（软件同一目录下的Collect.html中），不需要中断阅读切换窗口进行粘贴，方便你的记录整理。还可以为你摘录的句子添加注释。
+Collect模式下，在你进行阅读的时候，无论你使用的是什么阅读器（网页浏览器、PDF阅读器，Office.....），只需复制你想要摘录的文字或截图，即可自动摘录到你的文档里（软件同一目录下的Collect.html中），不需要中断阅读切换窗口进行粘贴，方便你的记录整理。还可以为你摘录的句子或截图添加注释。
 
 ###运行截图：
 <img src="https://github.com/lanbing510/ReadCollect/raw/master/screenshots/collect.png" width="50%" height="50%">
