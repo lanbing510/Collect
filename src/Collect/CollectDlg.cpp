@@ -197,14 +197,18 @@ void CCollectDlg::OnBnClickedButtonStart()
 		{
 			CString htmlStr = L"<html>\
 				\n <head>\
-				\n <style type = \"text/css\">\
-				\n body{ font-size:13px; font-family:微软雅黑}\
-				\n p{ margin:0; padding:0;}\
-			    \n <\/style>\
 				\n <title>Collect<\/title>\
+				\n <basefont face = \"微软雅黑\" size = \"2\" / >\
+				\n <meta http - equiv = \"Content-Type\" content = \"text/html;charset=utf-8\" \/ >\
+				\n <meta name = \"exporter-version\" content = \"Evernote Windows/276127; Windows/6.3.9600;\" \/ >\
+				\n <style>\
+				\n body, td{\
+				\n font - family: 微软雅黑;\
+				\n font - size: 10pt;}\
+				\n <\/style>\
 				\n <\/head>\n\
-				\n <body>\n";
-			File.WriteString(htmlStr);
+				\n <body>\n"; 
+				File.WriteString(htmlStr);
 		}
 		else
 		{
@@ -286,9 +290,8 @@ void CCollectDlg::OnDrawClipboard()
 
 		if (m_bStartCollectFlag && (File.m_hFile != INVALID_HANDLE_VALUE)&&m_strContent!=L"")
 		{
-			File.WriteString(L" <hr \/>\n");
-			//m_strContent.Replace(L"\n", L"<br>\n"); //换行显示模式
-			File.WriteString(L" <p>" + m_strContent + L"<\/p>\n");
+			File.WriteString(L" <div> <hr\/> <\/div>\n");
+			File.WriteString(L" <div>" + m_strContent + L"<\/div>\n");
 			File.Flush();
 		}
 
@@ -333,9 +336,9 @@ void CCollectDlg::OnDrawClipboard()
 				imgWidth.Format(imgWidth, 600);
 			}
 
-			File.WriteString(L" <hr \/>\n");
-			//File.WriteString(L" <p><img src=\"" + imgNameBmp +imgWidth+ L" \/><\/p>\n"); //链接为bmp
-			File.WriteString(L" <p><img src=\"" + imgNameJpg + imgWidth + L" \/><\/p>\n"); //链接为jpg
+			File.WriteString(L" <div> <hr\/> <\/div>\n");
+			//File.WriteString(L" <div><img src=\"" + imgNameBmp +imgWidth+ L" \/><\/div>\n"); //链接为bmp
+			File.WriteString(L" <div><img src=\"" + imgNameJpg + imgWidth + L" \/><\/div>\n"); //链接为jpg
 			File.Flush();
 		}
 
