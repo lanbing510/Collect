@@ -199,12 +199,12 @@ void CCollectDlg::OnBnClickedButtonStart()
 				\n <head>\
 				\n <title>Collect<\/title>\
 				\n <basefont face = \"Î¢ÈíÑÅºÚ\" size = \"2\" / >\
-				\n <meta http - equiv = \"Content-Type\" content = \"text/html;charset=utf-8\" \/ >\
+				\n <meta http-equiv = \"Content-Type\" content = \"text/html;charset=gb2312\" \/ >\
 				\n <meta name = \"exporter-version\" content = \"Evernote Windows/276127; Windows/6.3.9600;\" \/ >\
 				\n <style>\
 				\n body, td{\
-				\n font - family: Î¢ÈíÑÅºÚ;\
-				\n font - size: 10pt;}\
+				\n font-family: Î¢ÈíÑÅºÚ;\
+				\n font-size: 10pt;}\
 				\n <\/style>\
 				\n <\/head>\n\
 				\n <body>\n"; 
@@ -379,7 +379,7 @@ void CCollectDlg::OnBnClickedButtonComment()
 
 	if (m_bStartCollectFlag && (File.m_hFile != INVALID_HANDLE_VALUE))
 	{
-		File.WriteString(L" <p>" + m_edit_clip + L"<\/p>\n");
+		File.WriteString(L" <div>" + m_edit_clip + L"<\/div>\n");
 		File.Flush();
 	}
 
